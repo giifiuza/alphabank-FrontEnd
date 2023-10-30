@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    margin: 2%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+
+.logo img{
+    width: 25%;
+}
+
+.topics{
+    margin-right: 20rem;
+}
+.container a{
+    color: #C5BFBF;
+    text-decoration: none;
+    margin-right: 6rem;
+}
+
+button{
+    background-color: #0E0E0C;
+    align-items: center;
+    color: #C5BFBF;
+    font-family: 'Inter';
+    width: 5%;
+    display: flex;
+    border: none;
+    font-size: 1rem;
+    gap: 10%;
+}
+
+
+  
+

@@ -1,0 +1,11 @@
+.all{
+    display: flex;
+    margin-top: 10%;
+}
+.phase h1{
+    color: #fff;
+    width: 50%;
+    font-size: 5rem;
+    padding-left: 10%;
+    letter-spacing: 3px;
+}

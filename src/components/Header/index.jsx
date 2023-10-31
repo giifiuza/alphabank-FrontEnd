@@ -11,10 +11,10 @@ function Header() {
                 <img src={Logo} />
             </div>
             <div className='topics'>
-                <a href='#'>Freature</a>
-                <a href='#'>Pricing</a>
-                <a href='#'>About us</a>
-                <a href='#'>FAQ</a>
+                <a href='#'><p>Freature</p></a>
+                <a href='#'><p>Pricing</p></a>
+                <a href='#'><p>About us</p></a>
+                <a href='#'><p>FAQ</p></a>
             </div>
             <button onClick={alert}>
                 <FaSignOutAlt color='#C5BFBF'/>

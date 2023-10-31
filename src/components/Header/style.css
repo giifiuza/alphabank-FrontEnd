@@ -11,13 +11,46 @@
 }
 
 .topics{
-    margin-right: 20rem;
+    margin-right: 20vw;
+    display: flex;
+    gap: 10px;
 }
 .container a{
     color: #C5BFBF;
     text-decoration: none;
-    margin-right: 6rem;
+    width: 8rem;
+    text-wrap: nowrap;
+    display: block;
+    text-align: center;
+    justify-content: center;    
+    animation: 3s linear 1s infinite bordera;
+
+    @keyframes bordera {
+        from {
+            border-bottom: none;
+        }
+        to {
+            border-bottom: 1px solid #fff;
+        }
+    }
 }
+
+.container a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .container a:hover:after { 
+    transform: scaleX(1); 
+}
+
+
+  .container a:after{  
+    transform-origin:  0% 50%; 
+}
+
 
 button{
     background-color: #0E0E0C;

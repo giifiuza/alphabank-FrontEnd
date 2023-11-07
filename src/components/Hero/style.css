@@ -1,5 +1,5 @@
 .all{
-    margin-top: 10%;
+    margin-top: 7%;
     display: flex;
 }
 .phase h1{
@@ -9,3 +9,19 @@
     padding-left: 10%;
     letter-spacing: 3px;
 }
+
+.btn{
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-right: 15%;
+    width: 10%;
+    background-color: #222222;
+    border-radius: 30px;
+    padding: 15px;
+    color: #0077B6;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+}
+

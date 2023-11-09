@@ -4,6 +4,7 @@ import Hero from '../components/Hero/index'
 import Counts from '../components/Counts/index'
 import Numbers from '../components/Numbers/index'
 import Freatures from '../components/Freatures/index'
+import Phone from '../components/Phone'
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
         <Counts/>
         <Numbers/>
         <Freatures/>
-        
+        <Phone />
     </>
     
   )

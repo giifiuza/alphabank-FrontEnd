@@ -18,16 +18,18 @@ function Freature() {
           </div>
           <div className='freatures-options'>
             <div className='item'>
-              <h1>Technological Innovation</h1>
-              <p>pipipi popopo popopo popop popop opop opo popo </p>
+              <div>
+                <h1>Technological Innovation</h1>
+                <p>Empowering your finances through cutting-edge technology. Experience banking innovation at its best. </p>
+              </div>
             </div>
-            <div className='item'>oi</div>
-            <div className='item'>oi</div>
-            <div className='item'>oi</div>
-            <div className='item'>oi</div>
-            <div className='item'>oi</div>
+            <div className='item'>
+              <div>
+                <h1>Transparency</h1>
+                <p> We disclose every step to strengthen your relationship with money. Your bank, your clear vision of the future.</p>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
     </div>

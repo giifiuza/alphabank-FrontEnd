@@ -1,0 +1,10 @@
+.dot {
+    position: absolute;
+    left: 75%;
+    top: 245%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 50%;
+    border-radius: 50% 0px 0 50%;
+    background-color: #fff;
+}

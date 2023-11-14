@@ -8,3 +8,27 @@
     border-radius: 50% 0px 0 50%;
     background-color: #fff;
 }
+.containerMobile{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.mobile{
+    width: 23%;
+    margin-left: 15%;
+}
+
+.circulo{
+    width: 80%;
+    z-index: 0;
+}
+
+.titulo{
+    position: absolute;
+    color: black;
+    z-index: 1;
+    left: 50%;
+    top: 15%;
+    width: 25%;
+}

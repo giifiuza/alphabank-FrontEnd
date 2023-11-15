@@ -32,3 +32,15 @@
     top: 15%;
     width: 25%;
 }
+
+.play{
+    z-index: 1;
+    width: 10%;
+    height: 5%;
+}
+
+.app{
+    z-index: 1;
+    width: 10%;
+    height: 5%;
+}

@@ -5,7 +5,7 @@ import ContainerLogin from '../components/ContainerLogin'
 function Login() {
   return (
     <>
-      <Fundo />
+      {/* <Fundo /> */}
       <ContainerLogin />
 
     </>

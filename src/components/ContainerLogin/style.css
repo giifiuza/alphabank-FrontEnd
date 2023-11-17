@@ -1,4 +1,68 @@
-.login img{
-  z-index: 1;
-  position: absolute;
+/* SeuComponente.css */
+.container{
+  margin: 0;
+  background-image: url('../../assets/fundo.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.conteudo {
+  background-color: #212121; /* Fundo da seção com transparência */
+  padding: 5%;
+  border-radius: 10px;
+  text-align: center;
+  width: 40%;
+  height: 50vh;
+}
+
+.logo {
+  width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #272629;
+  border:1px solid #0077B6 ;
+  border-color: #0077B6;
+}
+
+.inputs input:hover{
+  border:1px solid #0077B6 ;
+}
+
+.password{
+  font-size: 10px;
+  color: #828282;
+  width: 60%;
+  margin-left: 50%;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.login{
+  background-color: transparent;
+  border: 1px solid #0077B6;
+  width: 80%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter';
+  font-weight: 100;
+  color: #0077B6;
 }

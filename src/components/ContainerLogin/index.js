@@ -10,15 +10,21 @@ function ContainerLogin() {
       <section className="conteudo">
 
         <div className="inputs">
-          <h1>Welcome!</h1>
-          <h2>CPF</h2>
-          <input type="cpf" placeholder="123.456.789.00" />
-          <h2>Password</h2>
-          <input type="text" placeholder="********" />
+          <h1 className='titleLogin'>Welcome!</h1>
+          <h2 className='subtitleLogin'>CPF</h2>
+          <input type="number" placeholder="123.456.789.00" />
+          <h2 className='subtitleLogin'>Password</h2>
+          <input type="password" placeholder="********" />
           <button className='password'>Forget password?</button>
-          <button className='login'>
-            <p>Login</p>
-          </button>
+          <div className='btnLogin'>
+            <button className='login'>
+              <p>Login</p>
+            </button>
+            <button className='register'>
+              <p>Register</p>
+            </button>
+          </div>
+
         </div>
       </section>
     </div>

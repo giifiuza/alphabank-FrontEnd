@@ -1,5 +1,5 @@
 /* SeuComponente.css */
-.container{
+.container {
   margin: 0;
   background-image: url('../../assets/fundo.png');
   background-size: cover;
@@ -14,7 +14,8 @@
 
 
 .conteudo {
-  background-color: #212121; /* Fundo da seção com transparência */
+  background-color: #212121;
+  /* Fundo da seção com transparência */
   padding: 5%;
   border-radius: 10px;
   text-align: center;
@@ -23,7 +24,8 @@
 }
 
 .logo {
-  width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+  width: 100px;
+  /* Ajuste o tamanho da logo conforme necessário */
   height: auto;
   margin-bottom: 20px;
 }
@@ -37,32 +39,72 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 50px;
+  height: 30px;
   background-color: #272629;
-  border:1px solid #0077B6 ;
-  border-color: #0077B6;
+  border: 1px solid #92ceee;
+  padding-left: 25px;
+  color: #828282;
 }
 
-.inputs input:hover{
-  border:1px solid #0077B6 ;
+.inputs input:focus {
+  outline: none;
 }
 
-.password{
+.inputs input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+
+.inputs input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.password {
   font-size: 10px;
   color: #828282;
-  width: 60%;
-  margin-left: 50%;
+  width: 20%;
+  margin-left: 82%;
   text-decoration: underline;
   background-color: transparent;
 }
 
-.login{
-  background-color: transparent;
-  border: 1px solid #0077B6;
-  width: 80%;
-  border-radius: 50px;
+.btnLogin {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background-color: transparent;
+  border: 1px solid #92ceee;
+  width: 40%;
+  border-radius: 50px;
   justify-content: center;
   font-family: 'Inter';
-  font-weight: 100;
-  color: #0077B6;
+  font-weight: bold;
+  margin-top: 10%;
+  color: #92ceee;
+}
+
+.titleLogin {
+  color: #E4E4E4;
+}
+
+.subtitleLogin {
+  text-align: start;
+  color: #E4E4E4;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.register {
+  background-color: transparent;
+  color: #92ceee;
+  font-family: 'Inter';
+  font-weight: bold;
+  width: 9.5%;
+  margin-top: 10px ;
 }

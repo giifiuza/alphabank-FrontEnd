@@ -1,0 +1,11 @@
+.iphone{
+    width: 100%;
+    margin-top: 10%;
+    height: auto;
+}
+
+.allRegister{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

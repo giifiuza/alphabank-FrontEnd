@@ -1,11 +1,11 @@
 import React from 'react'
-import Fundo from '../components/Fundo'
 import ContainerLogin from '../components/ContainerLogin'
+import Header from '../components/Header'
 
 function Login() {
   return (
     <>
-      {/* <Fundo /> */}
+      <Header />
       <ContainerLogin />
 
     </>

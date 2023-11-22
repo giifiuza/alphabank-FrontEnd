@@ -15,7 +15,6 @@
 
 .conteudo {
   background-color: #212121;
-  /* Fundo da seção com transparência */
   padding: 5%;
   border-radius: 10px;
   text-align: center;
@@ -25,7 +24,6 @@
 
 .logo {
   width: 100px;
-  /* Ajuste o tamanho da logo conforme necessário */
   height: auto;
   margin-bottom: 20px;
 }

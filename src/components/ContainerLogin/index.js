@@ -1,8 +1,11 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
+import { useNavigate } from "react-router-dom"
 import './style.css'
 
 function ContainerLogin() {
+
+  const navigate = useNavigate();
 
   return (
     <div className='container'>
@@ -17,10 +20,10 @@ function ContainerLogin() {
           <input type="password" placeholder="********" />
           <button className='password'>Forget password?</button>
           <div className='btnLogin'>
-            <button className='login'>
+            <button className='login'  onClick={()=> navigate('/')}>
               <p>Login</p>
             </button>
-            <button className='register'>
+            <button className='register' onClick={()=> navigate('/register')}>
               <p>Register</p>
             </button>
           </div>

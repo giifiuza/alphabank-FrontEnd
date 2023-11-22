@@ -1,13 +1,14 @@
-.container{
+.containerHome{
     display: flex;
-    margin: 2%;
     justify-content: space-between;
     align-items: center;
-    z-index: 0;
+    padding: 20px;
+    background-color: #0E0E0C;
 }
 
-.logo img{
+.logoHome img{
     width: 25%;
+    cursor: pointer;
 }
 
 .topics{
@@ -15,7 +16,8 @@
     display: flex;
     gap: 10px;
 }
-.container a{
+
+.containerHome a{
     color: #C5BFBF;
     text-decoration: none;
     width: 8rem;
@@ -35,19 +37,19 @@
     }
 }
 
-.container a:after {
+.containerHome a:after {
     display:block;
     content: '';
     border-bottom: solid 3px #019fb6;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
-  .container a:hover:after { 
+  .containerHome a:hover:after { 
     transform: scaleX(1); 
 }
 
 
-  .container a:after{  
+  .containerHome a:after{  
     transform-origin:  0% 50%; 
 }
 

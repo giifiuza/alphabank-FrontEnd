@@ -5,7 +5,6 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.15",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.490",
     "@testing-library/jest-dom": "^5.17.0",
@@ -41,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   }
 }

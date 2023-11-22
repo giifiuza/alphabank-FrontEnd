@@ -1,12 +1,19 @@
 import React from 'react'
 import ImageRegis from '../components/ImageRegis'
 import '../components/ImageRegis/style.css'
+import ContainerInputs from '../components/ContainerInputs'
+import Header from '../components/Header'
 
 function Register() {
   return (
-    <div className='allRegister' >
+    <>
+      <Header />
+      <div className='allRegister' >
         <ImageRegis />
-    </div>
+        <ContainerInputs />
+      </div>
+    </>
+
   )
 }
 

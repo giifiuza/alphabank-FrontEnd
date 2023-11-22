@@ -5,6 +5,7 @@ import Counts from '../components/Counts/index'
 import Numbers from '../components/Numbers/index'
 import Freatures from '../components/Freatures/index'
 import Download from '../components/Download'
+import Cards from '../components/Cards'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         <Numbers/>
         <Freatures/>
         <Download />
+        <Cards />
     </>
     
   )

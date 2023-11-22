@@ -14,7 +14,7 @@ function Download() {
                 <h1 className='titulo'>Join together with others to use Alpha Bank</h1>
                 <img className='play' src={playstore} alt='Logo PlayStore' />
                 <img className='app' src={appstore} alt='Logo AppStore' />
-                {/* <p>Join million of others to use to use the world’s best finance platform</p> */}
+                <p>Join million of others to use to use the world’s best finance platform</p>
             </div>
            
         </div>

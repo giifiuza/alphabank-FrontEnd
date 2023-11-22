@@ -1,17 +1,19 @@
-.dot {
-    position: absolute;
-    left: 75%;
-    top: 245%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    width: 50%;
-    border-radius: 50% 0px 0 50%;
-    background-color: #fff;
-}
+
 .containerMobile{
     display: flex;
     flex-direction: row;
     position: relative;
+}
+
+.containerMobile p{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 15%;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #6B6B6B;
+    font-size: 22px;
+    width: 25%;
 }
 
 .mobile{
@@ -29,18 +31,23 @@
     color: black;
     z-index: 1;
     left: 50%;
+    font-size: 40px;
     top: 15%;
-    width: 25%;
+    width: 28%;
 }
 
 .play{
-    z-index: 1;
-    width: 10%;
-    height: 5%;
+   position:absolute;
+    width: 11%;
+    margin-left: 58%;
+    margin-top: 25%;
+    height: 10%;
 }
 
 .app{
-    z-index: 1;
-    width: 10%;
-    height: 5%;
+    position:absolute;
+    width: 12%;
+    margin-left: 75%;
+    margin-top: 25%;
+    height: 9%;
 }

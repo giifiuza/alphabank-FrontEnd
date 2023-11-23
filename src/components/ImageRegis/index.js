@@ -5,7 +5,7 @@ import './style.css'
 function ImageRegis() {
   return (
     <div>
-        <img className='iphone' src={iphone} />
+        <img className='iphone' src={iphone} alt='Logo Phone' />
     </div>
   )
 }

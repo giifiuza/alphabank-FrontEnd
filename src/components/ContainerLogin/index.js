@@ -8,7 +8,7 @@ function ContainerLogin() {
   const navigate = useNavigate();
 
   return (
-    <div className='container'>
+    <div className='containerLogin'>
       <img src={logo} alt="Logo" className="logo" />
       <section className="conteudo">
 

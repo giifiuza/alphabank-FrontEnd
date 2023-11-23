@@ -15,10 +15,10 @@ function Header() {
                 <img src={Logo} alt='Logo' onClick={()=> navigate('/')}/>
             </div>
             <div className='topics'>
-                <a href='#'><p>Freature</p></a>
-                <a href='#'><p>Pricing</p></a>
-                <a href='#'><p>About us</p></a>
-                <a href='#'><p>FAQ</p></a>
+                <a href='/'><p>Freature</p></a>
+                <a href='/'><p>Pricing</p></a>
+                <a href='/'><p>About us</p></a>
+                <a href='/'><p>FAQ</p></a>
             </div>
             <button onClick={()=> navigate('/login')}>
                 <FaSignOutAlt color='#C5BFBF'/>

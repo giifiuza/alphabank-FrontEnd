@@ -19,7 +19,6 @@ function Hero() {
                 
             </div>
             <button className='btn' onClick={()=> navigate('/register')}>
-                
                 Order yours
             </button>
                 

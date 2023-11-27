@@ -11,9 +11,7 @@
     gap: 10%;
 }
 
-.allInputs{
-    padding-top: 5%;
-}
+
 .allInputs h1{
     font-size: 40px;
     background: -webkit-linear-gradient(#0077B6, #97cae2);
@@ -36,7 +34,7 @@
     color: #d4d4d4;
     font-family: 'Inter';
     width: 70%;
-    margin-bottom:30px ;
+    margin-bottom:20px ;
     font-size: 17px;
 }
 
@@ -78,3 +76,16 @@
     height: 50px;
 }
 
+.nomes{
+    display: flex;
+    width: 100%;
+    
+}
+
+.nomes input {
+    
+}
+
+.name{
+    width: 41%;
+}

@@ -9,7 +9,7 @@ function ContainerLogin() {
 
   return (
     <div className='containerLogin'>
-      <img src={logo} alt="Logo" className="logo" />
+     
       <section className="conteudo">
 
         <div className="inputs">
@@ -23,7 +23,7 @@ function ContainerLogin() {
             <button className='login'  onClick={()=> navigate('/')}>
               <p>Login</p>
             </button>
-            <button className='register' onClick={()=> navigate('/register')}>
+            <button className='register' type="submit" onClick={()=> navigate('/register')}>
               <p>Register</p>
             </button>
           </div>

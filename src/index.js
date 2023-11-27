@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import './App.css';
+import AccountUser from './pages/AccountUser';
+import DetailUser from './pages/DetailUser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +18,8 @@ root.render(
         <Route path='/' Component={Home} />
         <Route path='/login' Component={Login} />
         <Route path='/register' Component={Register} />
-        {/* <Route path='/account' Component={Account} /> */}
+        <Route path='/account' Component={AccountUser} />
+        <Route path='/details' Component={DetailUser} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

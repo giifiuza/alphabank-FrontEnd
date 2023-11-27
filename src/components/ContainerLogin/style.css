@@ -1,7 +1,6 @@
 /* SeuComponente.css */
 .containerLogin {
   margin: 0;
-  background-image: url('../../assets/fundo.png');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -13,19 +12,16 @@
 
 
 .conteudo {
-  background-color: #212121;
+  background-color: #232324;
+  ;
   padding: 5%;
   border-radius: 10px;
   text-align: center;
   width: 40%;
   height: 50vh;
+  margin-top: 3%;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px;
-}
 
 .inputs {
   display: flex;

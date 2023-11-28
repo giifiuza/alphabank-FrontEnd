@@ -2,7 +2,8 @@ import React from 'react'
 import Logo from '../../assets/logo.png'
 import './style.css'
 import { useNavigate } from "react-router-dom"
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignInAlt } from "react-icons/fa";
+import Button from '../Button/index'
 
 
 function Header() {
@@ -20,10 +21,9 @@ function Header() {
                 <a href='/'><p>About us</p></a>
                 <a href='/'><p>FAQ</p></a>
             </div>
-            <button onClick={()=> navigate('/login')}>
-                <FaSignOutAlt color='#C5BFBF'/>
-                Login
-            </button>
+            <Button title={'Login'}>
+                <FaSignInAlt size={24} color='#C5BFBF'/>
+            </Button>
                 
         </div>
     )

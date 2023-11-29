@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { api } from '../../services/api'
 import '../ImageRegis/style.css'
-import { toast } from 'react-toastify';
 import Modal from 'react-modal';
 
 
@@ -11,23 +10,32 @@ function ContainerInputs() {
   const navigate = useNavigate();
 
   async function register(e) {
-    await api.post('api/v1/user/create/', {
-      "email": e.target.email.value,
-      "password": e.target.password.value,
-      "dataNasc": e.target.dataNasc.value,
-      "first_name": e.target.first_name.value,
-      "telefone": e.target.telefone.value,
-      "last_name": e.target.last_name.value,
-      "cpf": e.target.cpf.value,
-      "url_imagem": null
-    })
-      .then(() => {
-        alert('Criou')
-      })
-      .catch(() => {
-        alert('Foi não')
-      })
+    const formData = new FormData();
+    formData.append('email', e.target.email.value);
+    formData.append('password', e.target.password.value);
+    formData.append('dataNasc', e.target.dataNasc.value);
+    formData.append('first_name', e.target.first_name.value);
+    formData.append('telefone', e.target.telefone.value);
+    formData.append('last_name', e.target.last_name.value);
+    formData.append('cpf', e.target.cpf.value);
+
+    if (imagem) {
+      formData.append('url_imagem', imagem);
+    }
+
+    try {
+      const response = await api.post('api/v1/user/create/', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      alert('Criou');
+    } catch (error) {
+      console.error(error);
+      alert('Foi não');
+    }
   }
+
 
   const [imagem, setImagem] = useState('');
   const [imagemPreview, setImagemPreview] = useState('');
@@ -89,7 +97,7 @@ function ContainerInputs() {
         <h2>Password</h2>
         <input type='password' name='password' placeholder='********' required />
         <h2>Profile Image</h2>
-        <input type="file" accept="image/png,jpg,jpeg" onChange={handleImagemChange} />
+        <input type="file" name='imag' accept="image/png,jpg,jpeg" onChange={handleImagemChange} />
         <div className='buttons'>
           <button className='btnRegis' type="submit" >Register</button>
           <button className='btnSign' onClick={() => navigate('/login')}>Sign In</button>
@@ -104,9 +112,9 @@ function ContainerInputs() {
         style={{
           content: {
             borderRadius: 20,
-            width: '25%', // Ajuste a largura conforme necessário
-            height: '40%', // Ajuste a altura conforme necessário
-            margin: 'auto', // Para centralizar o modal
+            width: '25%', 
+            height: '40%', 
+            margin: 'auto', 
           }
         }}
       >
@@ -118,20 +126,20 @@ function ContainerInputs() {
             style={{
               borderRadius: '50%',
               margin: 'auto',
-              width: '58%', // Ajuste o tamanho da imagem conforme necessário
-              height: '70%', // Ajuste o tamanho da imagem conforme necessário
-              display: 'block', // Impede qualquer margem extra
+              width: '58%',
+              height: '70%', 
+              display: 'block', 
             }}
           />
         ) : (
-          <span>No image selected</span>
+          <span>No image </span>
         )}
         <button
           style={{
             width: '14%',
             margin: 'auto',
             marginTop:'10px',
-            display: 'block', // Impede qualquer margem extra
+            display: 'block', 
           }}
           onClick={closeModal}
         >

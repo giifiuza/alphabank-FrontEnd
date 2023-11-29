@@ -1,35 +1,70 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom"
 import './style.css'
+import { useAuthStore } from '../../stores/authStores/index'
+import axios from 'axios'
 
 function ContainerLogin() {
 
   const navigate = useNavigate();
 
+  const setAccessToken = useAuthStore(state => state.setAccessToken);
+    const setRefreshToken = useAuthStore(state => state.setRefreshToken);
+
+    const [cpf, setCpf] = useState('');
+    const [password, setPassword] = useState('');
+
+    function Navigator() {
+        navigate('/inicial')
+    }
+
+    async function teste(e) {
+        e.preventDefault();
+        console.log(e)
+        await axios.post('http://localhost:8000/api/token/', {
+            "cpf": e.target.cpf.value,
+            "password": e.target.password.value
+        })
+        .then((response) => {
+            const accessToken = response.data.access;
+            const refreshToken = response.data.refresh;
+            setAccessToken(accessToken);
+            setRefreshToken(refreshToken);
+            console.log('cheguei aqui')
+        })
+        .then(() => {
+            navigate('/account', { replace: true })
+        })
+        .catch((e) => {
+            console.log(cpf, password)
+            console.log(e);
+        })
+    }
+
   return (
-    <div className='containerLogin'>
+    <form className='containerLogin' onSubmit={teste}>
      
       <section className="conteudo">
 
         <div className="inputs">
           <h1 className='titleLogin'>Welcome!</h1>
           <h2 className='subtitleLogin'>CPF</h2>
-          <input type="number" placeholder="123.456.789.00" />
+          <input type="number" name='cpf' placeholder="123.456.789.00" />
           <h2 className='subtitleLogin'>Password</h2>
-          <input type="password" placeholder="********" />
+          <input type="password" name='password' placeholder="********" />
           <button className='password'>Forget password?</button>
           <div className='btnLogin'>
-            <button className='login'  onClick={()=> navigate('/')}>
+            <button className='login' type="submit" >
               <p>Login</p>
             </button>
-            <button className='register' type="submit" onClick={()=> navigate('/register')}>
+            <button className='register' type="submit">
               <p>Register</p>
             </button>
           </div>
 
         </div>
       </section>
-    </div>
+    </form>
   );
 };
 

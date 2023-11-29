@@ -49,25 +49,11 @@
   .containerHome a:hover:after { 
     transform: scaleX(1); 
 }
-
-
   .containerHome a:after{  
     transform-origin:  0% 50%; 
 }
 
 
-button{
-    background-color: #0E0E0C;
-    align-items: center;
-    color: #C5BFBF;
-    font-family: 'Inter';
-    width: 5%;
-    display: flex;
-    border: none;
-    font-size: 1rem;
-    gap: 10%;
-    cursor: pointer;
-}
 
 
   

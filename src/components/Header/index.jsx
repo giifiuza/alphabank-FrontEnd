@@ -21,7 +21,7 @@ function Header() {
                 <a href='/'><p>About us</p></a>
                 <a href='/'><p>FAQ</p></a>
             </div>
-            <Button title={'Login'}>
+            <Button title={'Login'} onClick={(navigate) => navigate('/login')}>
                 <FaSignInAlt size={24} color='#C5BFBF'/>
             </Button>
                 

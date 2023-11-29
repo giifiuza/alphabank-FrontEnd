@@ -66,6 +66,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -80,12 +81,15 @@
   font-weight: bold;
   margin-top: 10%;
   color: #92ceee;
-  transition: all ease-in 1s;
+  transition: all ease 0.2s;
 }
 
-/* .login:hover {
-  transform: rotate(360deg);
-} */
+.login:hover{
+  background-color:#92ceee ;
+  color: #232324;
+}
+
+
 
 .titleLogin {
   color: #E4E4E4;
@@ -103,6 +107,12 @@
   color: #92ceee;
   font-family: 'Inter';
   font-weight: bold;
-  width: 9.5%;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
   margin-top: 10px ;
+}
+
+.register:hover{
+  text-decoration: underline;
 }

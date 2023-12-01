@@ -1,20 +1,77 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../components/Styles/accountuser.css';
 import Header from '../components/Header';
+import { useAuthStore } from '../stores/authStores';
+import axios from 'axios'
+
 import ImageAccount from '../assets/accountuser.svg';
 
 function AccountUser() {
+
+    const [saldo, setSaldo] = useState("")
+    const [agencia, setAgencia] = useState("")
+    const [conta, setConta] = useState("")
+    const [firstname, setFirstname] = useState("")
+    const [lastname, setLastname] = useState("")
+    
+    const accessToken = useAuthStore(state => state.accessToken);
+
+
+    async function name(e){
+        const response = await axios.get('http://localhost:8000/api/v1/user/me/', {
+            headers: {
+              Authorization: `Bearer ${accessToken}`
+            }  
+          })
+          .then((response) => {
+              console.log(response.data)
+              const firstname = response.data.first_name
+              const lastname = response.data.last_name
+              setFirstname(firstname)
+              setLastname(lastname)
+              
+          })
+    }
+
+
+    async function contaInformation(e) {
+        
+        console.log(e)
+        const response = await axios.get('http://localhost:8000/api/v1/accounts/', {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }  
+        })
+        .then((response) => {
+            console.log(response.data)
+            const saldo = response.data[0].saldo
+            const agencia = response.data[0].agencia
+            const conta = response.data[0].numero
+            setSaldo(saldo)
+            setAgencia(agencia)
+            setConta(conta)
+            console.log(saldo)
+        })
+    }
+
+    async function handleInformations(e){
+        e.preventDefault();
+        name()
+        contaInformation()
+    }
+
+    
     return (
         <>
             <Header />
-            <div className='containerAccount'>
+            <form className='containerAccount' onLoad={handleInformations}>
                 <div className="informations">
-                    <h1>Hello Fulano!</h1>
+                    <h1>Hello {firstname} {lastname}!</h1>
                     <div className="details">
-                        <h2>Your agency <span>0001</span></h2>
-                        <h2>Account number <span>123456-8</span></h2>
+                        <h2>Your agency <span>{agencia}</span></h2>
+                        <h2>Account number <span>{conta}</span></h2>
                     </div>
-                    <h2>Your balance is <span className='saldo'> R$10.000,00</span></h2>
+                    <h2>Your balance is <span className='saldo'> R${saldo}</span></h2>
 
                     <button type="submit">Solicitar cartão de crédito</button>
                 </div>
@@ -26,7 +83,7 @@ function AccountUser() {
 
 
 
-            </div>
+            </form>
         </>
 
     )

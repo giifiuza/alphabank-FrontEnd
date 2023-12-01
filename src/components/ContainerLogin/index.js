@@ -11,12 +11,9 @@ function ContainerLogin() {
   const setAccessToken = useAuthStore(state => state.setAccessToken);
     const setRefreshToken = useAuthStore(state => state.setRefreshToken);
 
-    const [cpf, setCpf] = useState('');
-    const [password, setPassword] = useState('');
+    const cpf = useState('');
+    const password = useState('');
 
-    function Navigator() {
-        navigate('/inicial')
-    }
 
     async function teste(e) {
         e.preventDefault();
@@ -30,7 +27,6 @@ function ContainerLogin() {
             const refreshToken = response.data.refresh;
             setAccessToken(accessToken);
             setRefreshToken(refreshToken);
-            console.log('cheguei aqui')
         })
         .then(() => {
             navigate('/account', { replace: true })

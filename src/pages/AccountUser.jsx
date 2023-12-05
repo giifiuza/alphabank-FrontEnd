@@ -73,7 +73,6 @@ function AccountUser() {
                     </div>
                     <h2>Your balance is <span className='saldo'> R${saldo}</span></h2>
 
-                    <button type="submit">Solicitar cartão de crédito</button>
                 </div>
                 <div className="mais-inform">
                     <h3>For more information download the app</h3>

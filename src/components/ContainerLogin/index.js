@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import './style.css'
 import { useAuthStore } from '../../stores/authStores/index'
@@ -8,38 +8,40 @@ function ContainerLogin() {
 
   const navigate = useNavigate();
 
+  //Constantes que armazenam os tokens
   const setAccessToken = useAuthStore(state => state.setAccessToken);
-    const setRefreshToken = useAuthStore(state => state.setRefreshToken);
+  const setRefreshToken = useAuthStore(state => state.setRefreshToken);
 
-    const cpf = useState('');
-    const password = useState('');
+  //Constante para armazenamento do cpf e passaword para assim passar para a api
+  const cpf = useState('');
+  const password = useState('');
 
-
-    async function teste(e) {
-        e.preventDefault();
-        console.log(e)
-        await axios.post('http://localhost:8000/api/token/', {
-            "cpf": e.target.cpf.value,
-            "password": e.target.password.value
-        })
-        .then((response) => {
-            const accessToken = response.data.access;
-            const refreshToken = response.data.refresh;
-            setAccessToken(accessToken);
-            setRefreshToken(refreshToken);
-        })
-        .then(() => {
-            navigate('/account', { replace: true })
-        })
-        .catch((e) => {
-            console.log(cpf, password)
-            console.log(e);
-        })
-    }
+  //Função que faz login
+  async function teste(e) {
+    e.preventDefault();
+    console.log(e)
+    await axios.post('http://localhost:8000/api/token/', {
+      "cpf": e.target.cpf.value,
+      "password": e.target.password.value
+    })
+      .then((response) => {
+        const accessToken = response.data.access;
+        const refreshToken = response.data.refresh;
+        setAccessToken(accessToken);
+        setRefreshToken(refreshToken);
+      })
+      .then(() => {
+        navigate('/account', { replace: true })
+      })
+      .catch((e) => {
+        console.log(cpf, password)
+        console.log(e);
+      })
+  }
 
   return (
     <form className='containerLogin' onSubmit={teste}>
-     
+
       <section className="conteudo">
 
         <div className="inputs">
@@ -53,7 +55,7 @@ function ContainerLogin() {
             <button className='login' type="submit" >
               <p>Login</p>
             </button>
-            <button className='register' type="submit">
+            <button onClick= {() => navigate('/register')} className='register' type="submit">
               <p>Register</p>
             </button>
           </div>

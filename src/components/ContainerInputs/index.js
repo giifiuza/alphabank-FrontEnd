@@ -9,6 +9,7 @@ function ContainerInputs() {
 
   const navigate = useNavigate();
 
+  //Função que faz o registro na api
   async function register(e) {
     const formData = new FormData();
     formData.append('email', e.target.email.value);
@@ -29,18 +30,21 @@ function ContainerInputs() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      alert('Criou');
+      navigate('/login')
     } catch (error) {
       console.error(error);
       alert('Foi não');
     }
   }
 
-
+  //Constantes para a imagem do upload
   const [imagem, setImagem] = useState('');
   const [imagemPreview, setImagemPreview] = useState('');
+
+  //Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  //Função para mostrar a imagem no modal
   const handleImagemChange = (e) => {
     const file = e.target.files[0];
 
